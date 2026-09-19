@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Student Data</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg- min-h-screen">
+
+    <div class="max-w-full mx-auto px-4 py-8">
+
+        <!-- Page Heading -->
+        <div class="mb-8 mx-10 text-center  flex flex-col gap-4 justify-between border-b-2 p-2">
+           
+            <h1 class="text-4xl font-bold text-gray-800">
+               List of All Registered Students
+            </h1>
+            
+            <a href="{% url 'student_create' %}" class=" border-2 w-[200px] ml-[43%] text-black hover:text-white hover:bg-gray-700  hover:scale-[1.08] transition bg-white rounded-lg py-2 px-3
+            ">
+                Add New Student 
+            </a>
+            
+           
+        </div>
+
+        {% if students %}
+
+        <!-- Student List -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+
+            {% for s in students %}
+            <div class="p-5 border-b border-gray-200 last:border-b-0
+                        hover:bg-gray-50 transition duration-200 hover:shadow-lg">
+
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+                    <!-- Student Information -->
+                    <div>
+                        <a href="{% url 'student_details' s.id %}"
+                           class="text-lg font-semibold text-blue-600 hover:text-blue-800">
+                            {{ s.name }}
+                        </a>
+
+                        <div class="mt-1 text-sm text-gray-600">
+                            <span class="mr-4">
+                                Age: {{ s.age }}
+                            </span>
+
+                            <span>
+                                Email: {{ s.email }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex gap-5">
+                        
+                        <a href="{% url 'student_details' s.id %}"
+                           class="px-4 py-2 bg-white border-2 border-gray-600 text-gray-600 rounded-lg
+                                  hover:bg-gray-700  hover:text-white transition duration-200">
+                            view
+                        </a>
+
+                        <a href="{% url 'student_edit' s.id %}"
+                           class="px-4 py-2 bg-blue-500 text-white rounded-lg
+                                  hover:bg-blue-600 transition duration-200">
+                            Edit
+                        </a>
+
+                        <a href="{% url 'student_delete' s.id %}"
+                           class="px-6 py-2 bg-red-500 text-white rounded-lg
+                                  hover:bg-red-600 transition duration-200">
+                            Delete
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <!-- No Data Message -->
+        <div class="bg-white rounded-xl shadow-md p-8 text-center">
+            <p class="text-gray-500 text-lg">
+                No student data available.
+            </p>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

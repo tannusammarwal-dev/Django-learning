@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>{{student_data}}</h1> -->
+    <h1>Student data</h1>
+    <table border="2" >
+        <thead>
+            <tr>
+            <th>Student_name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th> 
+            <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in students %}
+            <tr>
+                <td>{{Students.student_name}}</td>
+                <td>{{Students.age}}</td>
+                <td>{{Students.email}}</td>
+                <td>{{Students.phone}}</td>
+                <td>{{Students.course}}</td>
+            </tr>
+            {% empty %}
+    <tr>
+        <td colspan="4">No students found.</td>
+    </tr>
+             {% endfor %}
+        </tbody>
+
+ 
+    </table>
+</body>
+</html>

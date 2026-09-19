@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100  flex items-center justify-center p-6">
+
+    <div class="w-full max-w-md">
+
+        <!-- Card -->
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-7 text-white">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-4xl  font-bold">
+                        {{students.name|slice:":1"|upper}}
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-bold">
+                            Student Details
+                        </h1>
+                        <p class="text-blue-100 text-sm mt-1">
+                            Personal information
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Information -->
+            <div class="p-8 space-y-5">
+
+                <!-- Name -->
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-blue-50 border border-blue-100">
+                    <div class="w-11 h-11 bg-blue-600 text-white rounded-lg flex items-center justify-center">
+                        👤
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                            Name
+                        </p>
+                        <p class="text-lg font-semibold text-gray-800">
+                            {{ students.name }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Age -->
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-purple-50 border border-purple-100">
+                    <div class="w-11 h-11 bg-purple-600 text-white rounded-lg flex items-center justify-center">
+                        🎂
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                            Age
+                        </p>
+                        <p class="text-lg font-semibold text-gray-800">
+                            {{ students.age }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-green-50 border border-green-100">
+                    <div class="w-11 h-11 bg-green-600 text-white rounded-lg flex items-center justify-center">
+                        ✉️
+                    </div>
+
+                    <div class="min-w-0">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                            Email
+                        </p>
+                        <p class="text-lg font-semibold text-gray-800 truncate">
+                            {{ students.email }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Back Button -->
+                <div class="pt-3">
+                    <a href="{% url 'student_list' %}"
+                       class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl
+                              bg-blue-600 text-white font-semibold
+                              hover:bg-blue-800 transition duration-300
+                              shadow-lg hover:shadow-xl">
+                        <span>←</span>
+                        Back to Student List
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-sm text-gray-500 mt-6">
+            Student Management System
+        </p>
+
+    </div>
+
+</body>
+</html>

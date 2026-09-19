@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Women's Fashion Products</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+
+      <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-pink-600">
+          Fashion<span class="text-gray-800">Store</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium transition">
+            Home
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium transition">
+            Products
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium transition">
+            Categories
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium transition">
+            About
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium transition">
+            Contact
+          </a>
+
+        </div>
+
+        <!-- Cart -->
+        <button
+          class="hidden md:block bg-pink-600 text-white px-5 py-2 rounded-lg hover:bg-pink-700 transition">
+          🛒 Cart
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          onclick="toggleMenu()"
+          class="md:hidden text-gray-700 text-2xl">
+          ☰
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 border-t pt-4">
+
+        <div class="flex flex-col gap-4">
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium">
+            Home
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium">
+            Products
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium">
+            Categories
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium">
+            About
+          </a>
+
+          <a href="#"
+             class="text-gray-700 hover:text-pink-600 font-medium">
+            Contact
+          </a>
+
+          <button
+            class="bg-pink-600 text-white px-5 py-2 rounded-lg hover:bg-pink-700 w-fit">
+            🛒 Cart
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Products Section -->
+  <main class="p-6 mt-10">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+
+      <!-- Product Card 1 - Heels -->
+      <div class="bg-gray-200 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80"
+          alt="Women's Heels"
+          class="w-full h-56 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h2 class="text-xl font-bold text-gray-800">
+            Women's Stylish Heels
+          </h2>
+
+          <p class="text-gray-500 mt-2">
+            Elegant and comfortable heels perfect for parties and special occasions.
+          </p>
+
+          <div class="flex items-center gap-2 mt-3">
+            <div class="text-yellow-400 text-lg">
+              ★★★★★
+            </div>
+
+            <span class="text-gray-600 text-sm">
+              4.8 (176 reviews)
+            </span>
+          </div>
+
+          <div class="flex items-center justify-between mt-5">
+
+            <span class="text-2xl font-bold text-pink-600">
+              ₹1,699
+            </span>
+          
+            <div class="flex gap-2">
+
+              <a href="/product1"class="border border-pink-600 text-pink-600 px-4 py-2 rounded-lg hover:bg-pink-50 transition">
+                View
+            </a>
+
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
+                Buy Now
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Product Card 2 - Earrings -->
+      <div class="bg-gray-200 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
+          alt="Women's Earrings"
+          class="w-full h-56 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h2 class="text-xl font-bold text-gray-800">
+            Elegant Gold Earrings
+          </h2>
+
+          <p class="text-gray-500 mt-2">
+            Beautiful and elegant earrings to add a stylish touch to your look.
+          </p>
+
+          <div class="flex items-center gap-2 mt-3">
+
+            <div class="text-yellow-400 text-lg">
+              ★★★★☆
+            </div>
+
+            <span class="text-gray-600 text-sm">
+              4.6 (93 reviews)
+            </span>
+
+          </div>
+
+          <div class="flex items-center justify-between mt-5">
+
+            <span class="text-2xl font-bold text-pink-600">
+              ₹899
+            </span>
+
+            <div class="flex gap-2">
+
+              <a href="/product2/"
+                class="border border-pink-600 text-pink-600 px-4 py-2 rounded-lg hover:bg-pink-50 transition">
+                View
+            </a>
+
+              <button
+                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
+                Buy Now
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Product Card 3 - Handbag -->
+      <div class="bg-gray-200 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=80"
+          alt="Women's Handbag"
+          class="w-full h-56 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h2 class="text-xl font-bold text-gray-800">
+            Women's Fashion Handbag
+          </h2>
+
+          <p class="text-gray-500 mt-2">
+            Premium handbag with a spacious design for everyday styling.
+          </p>
+
+          <div class="flex items-center gap-2 mt-3">
+
+            <div class="text-yellow-400 text-lg">
+              ★★★★★
+            </div>
+
+            <span class="text-gray-600 text-sm">
+              4.9 (218 reviews)
+            </span>
+
+          </div>
+
+          <div class="flex items-center justify-between mt-5">
+
+            <span class="text-2xl font-bold text-pink-600">
+              ₹2,299
+            </span>
+
+            <div class="flex gap-2">
+
+              <a href="/product3/" class="border border-pink-600 text-pink-600 px-4 py-2 rounded-lg hover:bg-pink-50 transition">
+                View
+              </a>
+
+              <button
+                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
+                Buy Now
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            background-color:#111827;
+            opacity: 25px;
+        }
+         form{
+           
+            border-radius: 10px;
+            background-color:#1f2937;
+            padding: 20px 20px;
+            font-size: 35px;
+            line-height: 1.5;
+            color: white;
+            backdrop-filter: blur(15px);
+         }
+        form > button{
+            border: none;
+            border-radius: 10px;
+            height: 35px;
+            width: 100px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 8px;
+            background-color:rgb(216, 216, 122);
+           
+
+         }
+         button:hover{
+            background-color: rgb(234, 234, 24);
+         }
+         form >textarea{
+            height: 100px;
+            width: 1000px;
+            font-weight: bold;
+            font-size: 18px;
+            padding-inline: 20px;
+            background-color:whitesmoke;
+         }
+         p{
+            color: white;
+            margin-top: 30px;
+            font-size: 20px;
+            
+         }
+         h1{
+            color:rgb(248, 248, 107);
+            font-size: 60px;
+            word-spacing: 10px;
+            text-transform: capitalize;
+         }
+    
+         
+    </style>
+</head>
+<body>
+    <h1>welcome to text utility </h1>
+    <form action="/remove/" method="GET">
+        <textarea name="text" id="" placeholder="Enter your text here"></textarea><br>
+        <input type="checkbox" name="remove">remove punc<br>
+        <input type="checkbox" name="uppercase">uppercase<br>
+        <input type="checkbox" name="lowercase">lowercase<br>
+        <input type="checkbox" name="removeline">remove new line<br>
+
+        <button type="submit">submit</button><br>
+    </form>
+    <p>Text :- {{Text}}</p>
+    <p>Analyzed text :-{{changetext}}</p>
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add/Edit Student</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input,
+        select,
+        textarea {
+            width: 100%;
+            height: 50px;
+            padding: 12px 14px;
+            margin-top: 6px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #373af2;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+            padding: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        ul.errorlist {
+            color: #dc2626;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white w-[30%] p-8 rounded-2xl shadow-lg">
+
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">
+            Add /Edit Student
+        </h2>
+
+        <form action="" method="post" class="space-y-5">
+            {% csrf_token %}
+
+            <div class="space-y-10">
+                {{ form.as_p }}
+            </div>
+
+            <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200">
+                Submit
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>
