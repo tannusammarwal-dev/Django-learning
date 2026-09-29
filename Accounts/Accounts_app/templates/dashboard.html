@@ -1,699 +1,107 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
 
-<h2 class="font-bold text-pink-500">Welcome to Dashboard,<b>{{request.user.username}}<b></h2><br>
-     <header class="sticky top-0 z-50 border-b border-pink-100 bg-white">
-    <div class="mx-auto flex h-16 max-w-7xl flex justify-center px-4 sm:px-6 lg:px-8">
-     <!-- Navigation -->
-      <nav class="hidden items-center gap-8 md:flex">
-        <a href="#" class="text-sm font-medium text-gray-700 hover:text-pink-600">
-          Home
-        </a>
-
-        <a href="#categories" class="text-sm font-medium text-gray-700 hover:text-pink-600">
-          Categories
-        </a>
-
-        <a href="#products" class="text-sm font-medium text-gray-700 hover:text-pink-600">
-          Products
-        </a>
-
-        <a href="#footer" class="text-sm font-medium text-gray-700 hover:text-pink-600">
-          Contact
-        </a>
-      </nav>
-</header>
-
-  <!-- ================= HERO ================= -->
-  <section class="bg-pink-100">
-    <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8">
-
-      <div>
-
-        <span class="inline-block rounded-full bg-pink-200 px-4 py-2 text-sm font-semibold text-pink-700">
-          New Collection 2026
-        </span>
-
-        <h1 class="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-          Fashion Made
-          <span class="text-pink-600">Beautiful</span>
-          For Her
-        </h1>
-
-        <p class="mt-5 max-w-lg text-gray-600">
-          Discover stylish dresses, handbags, beauty products,
-          footwear and accessories made especially for women.
-        </p>
-
-        <a
-          href="#products"
-          class="mt-7 inline-block rounded-lg bg-pink-500 px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-pink-700"
-        >
-          Shop Now
-        </a>
-
-      </div>
-
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
-          alt="Women's Fashion"
-          class="h-[420px] w-full rounded-2xl object-cover"
-        >
-      </div>
-
-    </div>
-  </section>
+<section id="products" class="bg-white py-16">
 
 
-  <!-- ================= CATEGORIES ================= -->
-  <section id="categories" class="py-16">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-      <div class="mb-10 text-center">
-
-        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
-          Shop By Category
-        </h2>
-
-        <p class="mt-3 text-gray-600">
-          Find everything you need in one place
-        </p>
-
-      </div>
-
-
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-
-        <!-- Category -->
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            👗
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Dresses
-          </h3>
-        </a>
-
-
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            👜
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Handbags
-          </h3>
-        </a>
-
-
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            👠
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Footwear
-          </h3>
-        </a>
-
-
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            💄
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Beauty
-          </h3>
-        </a>
-
-
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            💍
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Jewellery
-          </h3>
-        </a>
-
-
-        <a
-          href="#products"
-          class="group rounded-xl bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-        >
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-3xl">
-            🕶️
-          </div>
-
-          <h3 class="mt-4 font-semibold text-gray-900 group-hover:text-pink-600">
-            Accessories
-          </h3>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-   <!-- Product Section -->
-  <section class="py-12">
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-      <!-- Heading -->
-      <div class="mb-10 text-center">
-
-        <h2 class="text-3xl font-bold text-pink-600 sm:text-4xl">
-          Girls Collection
-        </h2>
-
-        <p class="mt-3 text-gray-600">
-          Stylish products made for her
-        </p>
-
-      </div>
-
-
-      <!-- Product Grid -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-
-        <!-- Product 1 -->
-        <div class="overflow-hidden rounded-xl bg-white shadow-sm transform transition-transform duration-100 hover:-translate-y-2 hover:shadow-xl">
-
-          <img
-            src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80"
-            alt="Women's Dress"
-            class="h-64 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <h3 class="text-lg font-semibold text-gray-900">
-              Pink Dress
-            </h3>
-
-            <p class="mt-2 text-xl font-bold text-pink-600">
-              ₹1,999
-            </p>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 text-sm font-semibold text-white hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </div>
-
-
-        <!-- Product 2 -->
-        <div class="overflow-hidden rounded-xl bg-white shadow-sm transform transition-transform duration-100 hover:-translate-y-2 hover:shadow-xl">
-
-          <img
-            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
-            alt="Women's Handbag"
-            class="h-64 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <h3 class="text-lg font-semibold text-gray-900">
-              Women's Handbag
-            </h3>
-
-            <p class="mt-2 text-xl font-bold text-pink-600">
-              ₹2,499
-            </p>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 text-sm font-semibold text-white hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </div>
-
-
-        <!-- Product 3 -->
-        <div class="overflow-hidden rounded-xl bg-white shadow-sm transform transition-transform duration-100 hover:-translate-y-2 hover:shadow-xl">
-
-          <img
-            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=600&q=80"
-            alt="Beauty Products"
-            class="h-64 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <h3 class="text-lg font-semibold text-gray-900">
-              Beauty Essentials
-            </h3>
-
-            <p class="mt-2 text-xl font-bold text-pink-600">
-              ₹1,499
-            </p>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 text-sm font-semibold text-white hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </div>
-
-
-        <!-- Product 4 -->
-        <div class="overflow-hidden rounded-xl bg-white shadow-sm transform transition-transform duration-100 hover:-translate-y-2 hover:shadow-xl">
- 
-          <img
-            src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=80"
-            alt="Women's Fashion"
-            class="h-64 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <h3 class="text-lg font-semibold text-gray-900">
-              Fashion Outfit
-            </h3>
-
-            <p class="mt-2 text-xl font-bold text-pink-600">
-              ₹2,799
-            </p>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 text-sm font-semibold text-white hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-  </section>
-  <!-- ================= PRODUCTS ================= -->
-  <section id="products" class="bg-white py-16">
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-      <!-- Heading -->
-      <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-
-        <div>
-          <span class="font-semibold text-pink-600">
-            Our Collection
-          </span>
-
-          <h2 class="mt-2 text-3xl font-bold text-gray-900">
-            Trending Products
-          </h2>
-        </div>
-
-        <a
-          href="#"
-          class="font-semibold text-pink-600 hover:text-pink-700"
-        >
-          View All →
-        </a>
-
-      </div>
-
-
-      <!-- Product Grid -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-
-        <!-- Product 1 -->
-        <article
-          class="overflow-hidden rounded-2xl bg-pink-50 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-        >
-
-          <div class="relative">
-
-            <img
-              src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=80"
-              alt="Pink Dress"
-              class="h-72 w-full object-cover"
-            >
-
-            <span class="absolute left-3 top-3 rounded-full bg-pink-500 px-3 py-1 text-xs font-semibold text-white">
-              New
-            </span>
-
-          </div>
-
-          <div class="p-5">
-
-            <p class="text-sm text-pink-600">
-              Dresses
-            </p>
-
-            <h3 class="mt-1 text-lg font-bold text-gray-900">
-              Elegant Pink Dress
-            </h3>
-
-            <div class="mt-3 flex items-center justify-between">
-
-              <span class="text-xl font-bold text-pink-600">
-                ₹1,999
-              </span>
-
-              <span class="text-sm text-gray-400 line-through">
-                ₹2,499
-              </span>
-
+        <div class="mb-10 flex items-end justify-between">
+
+            <div>
+                <span class="font-semibold text-pink-600">
+                    Our Collection
+                </span>
+
+                <h2 class="mt-2 text-3xl font-bold text-gray-900">
+                    Trending Products
+                </h2>
             </div>
 
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 font-semibold text-white transition-colors duration-300 hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </article>
-
-
-        <!-- Product 2 -->
-        <article
-          class="overflow-hidden rounded-2xl bg-pink-50 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-        >
-
-          <img
-            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"
-            alt="Pink Handbag"
-            class="h-72 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <p class="text-sm text-pink-600">
-              Handbags
-            </p>
-
-            <h3 class="mt-1 text-lg font-bold text-gray-900">
-              Premium Pink Bag
-            </h3>
-
-            <div class="mt-3 flex items-center justify-between">
-
-              <span class="text-xl font-bold text-pink-600">
-                ₹2,499
-              </span>
-
-              <span class="text-sm text-gray-400 line-through">
-                ₹3,199
-              </span>
-
-            </div>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 font-semibold text-white transition-colors duration-300 hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </article>
-
-
-        <!-- Product 3 -->
-        <article
-          class="overflow-hidden rounded-2xl bg-pink-50 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-        >
-
-          <img
-            src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
-            alt="Women's Shoes"
-            class="h-72 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <p class="text-sm text-pink-600">
-              Footwear
-            </p>
-
-            <h3 class="mt-1 text-lg font-bold text-gray-900">
-              Pink Heels
-            </h3>
-
-            <div class="mt-3 flex items-center justify-between">
-
-              <span class="text-xl font-bold text-pink-600">
-                ₹1,799
-              </span>
-
-              <span class="text-sm text-gray-400 line-through">
-                ₹2,299
-              </span>
-
-            </div>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 font-semibold text-white transition-colors duration-300 hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </article>
-
-
-        <!-- Product 4 -->
-        <article
-          class="overflow-hidden rounded-2xl bg-pink-50 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-        >
-
-          <img
-            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
-            alt="Makeup Products"
-            class="h-72 w-full object-cover"
-          >
-
-          <div class="p-5">
-
-            <p class="text-sm text-pink-600">
-              Beauty
-            </p>
-
-            <h3 class="mt-1 text-lg font-bold text-gray-900">
-              Beauty Essentials
-            </h3>
-
-            <div class="mt-3 flex items-center justify-between">
-
-              <span class="text-xl font-bold text-pink-600">
-                ₹1,499
-              </span>
-
-              <span class="text-sm text-gray-400 line-through">
-                ₹1,999
-              </span>
-
-            </div>
-
-            <button
-              class="mt-5 w-full rounded-lg bg-pink-500 px-4 py-3 font-semibold text-white transition-colors duration-300 hover:bg-pink-700"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        </article>
-     </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= NEWSLETTER ================= -->
-  <section class="bg-pink-600 py-14">
-
-    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
-
-      <h2 class="text-3xl font-bold text-white">
-        Get 10% Off Your First Order
-      </h2>
-
-      <p class="mt-3 text-pink-100">
-        Subscribe to our newsletter for new arrivals and special offers.
-      </p>
-
-      <div class="mx-auto mt-6 flex max-w-lg flex-col gap-3 sm:flex-row">
-
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="w-full rounded-lg border-0 px-4 py-3 text-gray-800 outline-none ring-0"
-        >
-
-        <button
-          class="rounded-lg bg-white px-6 py-3 font-semibold text-pink-600 transition-colors duration-300 hover:bg-pink-100"
-        >
-          Subscribe
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-  <footer id="footer" class="bg-gray-900 text-gray-300">
-
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-
-      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
-        
-        <!-- Quick Links -->
-        <div>
-
-          <h3 class="font-semibold text-white">
-            Quick Links
-          </h3>
-
-          <ul class="mt-4 space-y-3 text-sm">
-
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a href="#categories" class="hover:text-pink-400">
-                Categories
-              </a>
-            </li>
-
-            <li>
-              <a href="#products" class="hover:text-pink-400">
-                Products
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                About Us
-              </a>
-            </li>
-
-          </ul>
+            <!-- Product List Page -->
+            <a href="{% url 'product_list' %}"
+               class="font-semibold text-pink-600 hover:text-pink-700">
+                View All →
+            </a>
 
         </div>
 
 
-        <!-- Customer Service -->
-        <div>
+        <!-- Dynamic Products -->
 
-          <h3 class="font-semibold text-white">
-            Customer Service
-          </h3>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-          <ul class="mt-4 space-y-3 text-sm">
+            {% for product in products %}
 
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                Contact Us
-              </a>
-            </li>
+            <article class="overflow-hidden rounded-2xl bg-pink-50 shadow-sm
+                            transition-all duration-300
+                            hover:-translate-y-2 hover:shadow-xl">
 
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                Shipping Information
-              </a>
-            </li>
+                <div class="relative">
 
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                Returns & Refunds
-              </a>
-            </li>
+                    <img
+                        src="{{ product.image.url }}"
+                        alt="{{ product.name }}"
+                        class="h-72 w-full object-cover"
+                    >
 
-            <li>
-              <a href="#" class="hover:text-pink-400">
-                FAQs
-              </a>
-            </li>
+                </div>
 
-          </ul>
+                <div class="p-5">
+
+                    <p class="text-sm text-pink-600">
+                        {{ product.category }}
+                    </p>
+
+                    <h3 class="mt-1 text-lg font-bold text-gray-900">
+                        {{ product.name }}
+                    </h3>
+
+                    <div class="mt-3">
+
+                        <span class="text-xl font-bold text-pink-600">
+                            ₹{{ product.price }}
+                        </span>
+
+                    </div>
+
+                    <div class="mt-5 flex gap-2">
+
+                        <!-- Detail Page -->
+                        <a href="{% url 'product_detail' product.pk %}"
+                           class="w-full rounded-lg border border-pink-500
+                                  px-4 py-3 text-center font-semibold
+                                  text-pink-500 hover:bg-pink-50">
+                            View
+                        </a>
+
+                        <!-- Add To Cart -->
+                        <a href="{% url 'add_to_cart' product.pk %}"
+                           class="w-full rounded-lg bg-pink-500
+                                  px-4 py-3 text-center font-semibold
+                                  text-white hover:bg-pink-700">
+                            Add to Cart
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            {% empty %}
+
+                <p class="col-span-full text-center text-gray-500">
+                    No products available.
+                </p>
+
+            {% endfor %}
 
         </div>
-
-
-        <!-- Contact -->
-        <div>
-
-          <h3 class="font-semibold text-white">
-            Contact Us
-          </h3>
-
-          <ul class="mt-4 space-y-3 text-sm text-gray-400">
-
-            <li>
-              📍 New Delhi, India
-            </li>
-
-            <li>
-              📧 hello@pinkify.com
-            </li>
-
-            <li>
-              📞 +91 98765 43210
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-      <!-- Bottom Footer -->
-      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
-
-        <p class="text-sm text-gray-500">
-          © 2026 Pinkify. All rights reserved.
-        </p>
-
-      </div>
 
     </div>
 
-  </footer>
-<!-- <p>Email:{{request.user.email}}</p> -->
-
+</section>
 {% endblock %}

@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .product-page {
+        min-height: 100vh;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #fdf2f8, #fce7f3, #fbcfe8);
+    }
+
+    .product-card {
+        max-width: 650px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #f9a8d4;
+        border-radius: 24px;
+        padding: 35px;
+        box-shadow: 0 20px 50px rgba(236, 72, 153, 0.15);
+    }
+
+    .product-title {
+        color: #be185d;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .product-subtitle {
+        color: #9d174d;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .product-form p {
+        margin-bottom: 20px;
+    }
+
+    .product-form label {
+        display: block;
+        color: #831843;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .product-form input,
+    .product-form textarea,
+    .product-form select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #f9a8d4;
+        border-radius: 12px;
+        outline: none;
+        background: #fff;
+        color: #831843;
+        transition: all 0.2s ease;
+    }
+
+    .product-form input:focus,
+    .product-form textarea:focus,
+    .product-form select:focus {
+        border-color: #ec4899;
+        box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.12);
+    }
+
+    .product-form input[type="file"] {
+        padding: 10px;
+        background: #fdf2f8;
+        cursor: pointer;
+    }
+
+    .product-button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ec4899, #db2777);
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(219, 39, 119, 0.25);
+    }
+
+    .product-button:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #db2777, #be185d);
+        box-shadow: 0 12px 25px rgba(219, 39, 119, 0.35);
+    }
+
+    .product-button:active {
+        transform: translateY(0);
+    }
+
+    .helptext {
+        display: block;
+        margin-top: 5px;
+        color: #9d174d;
+        font-size: 13px;
+    }
+
+    .errorlist {
+        color: #be123c;
+        font-size: 14px;
+        margin-bottom: 8px;
+        list-style: none;
+        padding: 0;
+    }
+</style>
+
+<div class="product-page">
+
+    <div class="product-card">
+
+        <h1 class="product-title">
+            Add Product
+        </h1>
+
+        <p class="product-subtitle">
+            Add a new product to your collection
+        </p>
+
+        <form action="" method="POST" enctype="multipart/form-data" class="product-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="product-button">
+                Add Product
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

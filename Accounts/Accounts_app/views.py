@@ -1,8 +1,11 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout,login,authenticate
 from django.contrib import messages
 from .forms import RegistrationForm
+from .forms import ProductFrom
+from .models import Product
+
 
 
 # Create your views here.
@@ -48,11 +51,44 @@ def logout_view(request):
         return redirect('login')
 
 
-@login_required(login_url ='login')
+# @login_required(login_url ='login')
 def dashboard(request):
     form = RegistrationForm()
     return render(request,"dashboard.html",{'form':form})
 
 
+def dashboard(request):
+
+    products = Product.objects.all()[:4]
+
+    return render(request, 'dashboard.html', {
+        'products': products
+    }) 
+
+
+def product_list(request):
+        products = Product.objects.all()
+        return render(request,"product_list.html",{'products':products})
+
+def add_products(request):
+    if request.method == 'POST':
+        form = ProductFrom(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('product_list')
+
+    else:
+        form = ProductFrom()
+
+    return render(request, 'add_products.html', {'form': form})
+
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk = pk)
+
+    return render(request, 'product_detail.html', {'product': product})
+
+def add_to_cart(request):
+   return render(request,'cart.html')
 
 

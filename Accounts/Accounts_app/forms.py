@@ -1,6 +1,8 @@
 from django import forms
+from .models import Product
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+
 
 class RegistrationForm(UserCreationForm):
         email =forms.EmailField(required = True)
@@ -15,3 +17,9 @@ def clean_email(self):
                 raise forms.ValidationError("Email already exists")
 
         return email
+
+
+class ProductFrom(forms.ModelForm):
+        class Meta:
+                model = Product
+                fields = ['image','name','price','description']
