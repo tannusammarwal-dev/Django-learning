@@ -10,3 +10,12 @@ class SimpleMiddleware(MiddlewareMixin):
     def process_response(self,request,response):
         print(f"[{datetime.datetime.now()}] Request Status:{response.status_code}")
         return response     
+
+
+class BlockIPMiddleware(MiddlewareMixin):
+    BLOCKED_IPS = ['127.0.0.1'] #example for local ip
+
+    def process_request(self,request):
+        ip = request.META.get('REMOTE_ADDR')
+        if ip in self.BLOCKED_IPS:
+            return HttpResponse("your ip is blocked")
